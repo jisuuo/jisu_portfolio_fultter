@@ -6,6 +6,7 @@ import 'package:jisu_portfolio/common/component/custom_button.dart';
 import 'package:jisu_portfolio/common/component/custom_form_field.dart';
 import 'package:jisu_portfolio/common/const/colors.dart';
 import 'package:jisu_portfolio/common/const/string.dart';
+import 'package:jisu_portfolio/main/view/main_view.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -44,7 +45,9 @@ class LoginPage extends StatelessWidget {
                           backgroundColor: const Color(0xff22A45D),
                           minimumSize: const Size(200, 50),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => const MainPage(),));
+                        },
                         child: const Text(
                           'Login',
                           style: TextStyle(fontWeight: FontWeight.bold),
