@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jisu_portfolio/common/const/colors.dart';
 
 class CustomButton extends StatefulWidget {
   final String title;
@@ -15,15 +16,12 @@ class _CustomButtonState extends State<CustomButton> {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
-      color: Color(0xff22A45D),
+      onPressed: widget.onPressed,
+      color: PRIMARY_COLOR,
       textColor: Colors.white,
-      child: Icon(
-        Icons.camera_alt,
-        size: 30,
-      ),
-      padding: EdgeInsets.all(16),
-      shape: CircleBorder(),
+      padding: const EdgeInsets.all(16),
+      shape: const CircleBorder(),
+      child: Text(widget.title!),
     );
   }
 }
